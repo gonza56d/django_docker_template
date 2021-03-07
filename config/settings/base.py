@@ -33,7 +33,9 @@ THIRD_PARTY_APPS = [
     'rest_framework.authtoken',
 ]
 
-PROJECT_APPS = []
+PROJECT_APPS = [
+    'encasa.users.apps.UsersConfig',
+]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
@@ -102,8 +104,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # User override
-# AUTH_USER_MODEL = 'users.User'
-# AUTHENTICATION_BACKENDS = ['encasa.users.backends.UserBackend']
+AUTH_USER_MODEL = 'users.User'
+AUTHENTICATION_BACKENDS = ['encasa.users.backends.UserBackend']
 
 
 # Internationalization
